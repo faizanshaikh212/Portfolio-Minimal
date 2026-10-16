@@ -1,10 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dsasda</title>
+    <meta name="theme-color" content="#081326" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="1024x1024" href="/favicon.png" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta
+      name="description"
+      content="Faizan Shaikh is a creative developer building thoughtful digital experiences through expressive code and design."
+    />
+    <meta name="author" content="Faizan Shaikh" />
+    <title>Faizan Shaikh</title>
+    <script>
+      try {
+        const theme = localStorage.getItem("portfolio-theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch (error) {
+        console.warn("The saved theme could not be restored.", error);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
