@@ -1,5 +1,5 @@
 import { useId } from "react";
-import "./ThemeToggle.css";
+import "../styles/themeToggle.css";
 
 const STARS = [
   { top: "47%", left: "12%", size: 1.5 },

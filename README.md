@@ -20,6 +20,8 @@ Run `npm run typecheck` or `npm run build` to verify the project.
 - `data/content.ts` is the single entry point for the content modules.
 - `src/components/` contains the homepage sections and reusable project cards;
   `src/hooks/useSiteTheme.ts` owns theme persistence and document theme setup.
+- `src/styles/` separates base, layout, component, responsive, and theme-toggle
+  styles. Import styles through `src/styles/index.css`.
 
 The site is intentionally being built in small releases. See
 [`changelogs.md`](./changelogs.md) for the current milestone and next release.

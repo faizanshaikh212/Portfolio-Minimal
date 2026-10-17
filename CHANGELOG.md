@@ -3,6 +3,11 @@
 Notable changes to the portfolio are documented here. Versions follow
 `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes respectively.
 
+## 0.1.3 — 2026-10-25
+
+- Split global styles into base, layout, component, responsive, and theme-toggle stylesheets.
+- Move the theme-toggle stylesheet into `src/styles/themeToggle.css`.
+
 ## 0.1.2 — 2026-10-25
 
 - Split the homepage into focused React components and move theme handling into a dedicated hook.
