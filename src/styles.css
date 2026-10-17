@@ -295,11 +295,8 @@ button:focus-visible {
   right: 4%;
   width: clamp(150px, 24vw, 230px);
   aspect-ratio: 1;
-  padding: 0.45rem;
   overflow: hidden;
-  border: 1px solid var(--line);
   border-radius: 50%;
-  background: var(--surface);
   box-shadow: 0 0 70px var(--ambient);
   transform: translateY(-50%);
 }

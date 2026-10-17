@@ -3,6 +3,11 @@
 Notable changes to the portfolio are documented here. Versions follow
 `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes respectively.
 
+## 0.1.2 — 2026-10-25
+
+- Split the homepage into focused React components and move theme handling into a dedicated hook.
+- Remove the decorative frame around the profile image.
+
 ## 0.1.1 — 2026-10-25
 
 - Organize site settings in `config/app.ts` and editable content in `data/`.
