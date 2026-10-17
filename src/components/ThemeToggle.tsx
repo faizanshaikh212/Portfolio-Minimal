@@ -1,5 +1,4 @@
 import { useId } from "react";
-import "../styles/themeToggle.css";
 
 const STARS = [
   { top: "47%", left: "12%", size: 1.5 },
@@ -79,7 +78,7 @@ export function ThemeToggle({
       aria-checked={isDark}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
       onClick={onToggle}
-      className="theme-toggle"
+      className="relative inline-block h-8 w-16 shrink-0 select-none overflow-hidden rounded-full border-0 bg-transparent p-0 align-middle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
       style={{
         touchAction: "manipulation",
         boxShadow:
@@ -91,7 +90,7 @@ export function ThemeToggle({
       {/* Sky layers */}
       <span
         aria-hidden
-        className="theme-toggle__layer"
+        className="absolute inset-0 transition-opacity duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
         style={{
           transitionDuration: "var(--duration-slow)",
           transitionTimingFunction: "var(--ease-in-out)",
@@ -101,7 +100,7 @@ export function ThemeToggle({
       />
       <span
         aria-hidden
-        className="theme-toggle__layer"
+        className="absolute inset-0 transition-opacity duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
         style={{
           transitionDuration: "var(--duration-slow)",
           transitionTimingFunction: "var(--ease-in-out)",
@@ -113,7 +112,7 @@ export function ThemeToggle({
       {/* Stars and sparkles (dark mode only) */}
       <span
         aria-hidden
-        className="theme-toggle__layer"
+        className="absolute inset-0 transition-opacity duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
         style={{
           transitionDuration: "var(--duration-slow)",
           transitionDelay: isDark ? "150ms" : "0ms",
@@ -123,7 +122,7 @@ export function ThemeToggle({
         {STARS.map((star, i) => (
           <span
             key={i}
-            className="theme-toggle__star"
+            className="absolute rounded-full bg-white"
             style={{
               top: star.top,
               left: star.left,
@@ -135,7 +134,7 @@ export function ThemeToggle({
           />
         ))}
         <span
-          className="theme-toggle__sparkle"
+          className="absolute bg-white"
           style={{
             top: "24%",
             left: "30%",
@@ -146,7 +145,7 @@ export function ThemeToggle({
           }}
         />
         <span
-          className="theme-toggle__sparkle"
+          className="absolute bg-white"
           style={{
             top: "44%",
             left: "57%",
@@ -157,7 +156,7 @@ export function ThemeToggle({
           }}
         />
         <span
-          className="theme-toggle__sparkle"
+          className="absolute bg-white"
           style={{
             top: "76%",
             left: "48%",
@@ -171,14 +170,14 @@ export function ThemeToggle({
       {/* Clouds (light mode only) */}
       <span
         aria-hidden
-        className="theme-toggle__layer"
+        className="absolute inset-0 transition-opacity duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
         style={{
           transitionDuration: "var(--duration-slow)",
           transitionTimingFunction: "var(--ease-in-out)",
           opacity: isDark ? 0 : 1,
         }}
       >
-        <svg aria-hidden viewBox="0 0 64 32" preserveAspectRatio="none" className="theme-toggle__artwork">
+        <svg aria-hidden viewBox="0 0 64 32" preserveAspectRatio="none" className="absolute inset-0 size-full">
           <defs>
             <linearGradient id={cloudBackGradientId} x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#9edaff" />
@@ -214,7 +213,7 @@ export function ThemeToggle({
       {/* Celestial body: travels left (sun) to right (moon) */}
       <span
         aria-hidden
-        className="theme-toggle__body"
+        className="absolute top-1/2 h-6 w-6 transition-transform duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
         style={{
           left: 4,
           transitionDuration: "var(--duration-slow)",
@@ -223,7 +222,7 @@ export function ThemeToggle({
         }}
       >
         <span
-          className="theme-toggle__body-shape"
+          className="absolute inset-0 rounded-full transition-opacity duration-(--duration-base) ease-[var(--ease-in-out)] motion-reduce:transition-none"
           style={{
             transitionDuration: "var(--duration-base)",
             opacity: isDark ? 0 : 1,
@@ -234,7 +233,7 @@ export function ThemeToggle({
           }}
         />
         <span
-          className="theme-toggle__body-shape"
+          className="absolute inset-0 rounded-full transition-opacity duration-(--duration-base) ease-[var(--ease-in-out)] motion-reduce:transition-none"
           style={{
             transitionDuration: "var(--duration-base)",
             opacity: isDark ? 1 : 0,
@@ -248,7 +247,7 @@ export function ThemeToggle({
           <span
             key={index}
             aria-hidden
-            className="theme-toggle__crater"
+            className="absolute rounded-full bg-slate-600/45 transition-opacity duration-(--duration-base) ease-[var(--ease-in-out)] motion-reduce:transition-none"
             style={{
               width: crater.size,
               height: crater.size,
@@ -267,7 +266,7 @@ export function ThemeToggle({
         aria-hidden
         viewBox="0 0 64 32"
         preserveAspectRatio="none"
-        className="theme-toggle__artwork"
+        className="pointer-events-none absolute inset-0 size-full"
       >
         <defs>
           <linearGradient id={rimGradientId} x1="0" y1="0" x2="0" y2="1">

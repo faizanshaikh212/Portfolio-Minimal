@@ -3,6 +3,11 @@
 Notable changes to the portfolio are documented here. Versions follow
 `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes respectively.
 
+## 0.2.0 — 2026-10-25
+
+- Replace component and layout CSS with Tailwind CSS utility classes.
+- Add Tailwind CSS 4 through the Vite plugin.
+
 ## 0.1.3 — 2026-10-25
 
 - Split global styles into base, layout, component, responsive, and theme-toggle stylesheets.
