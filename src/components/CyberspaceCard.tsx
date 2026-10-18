@@ -1,6 +1,6 @@
 export function CyberspaceCard() {
   return (
-    <article className="cyberspace-card group relative isolate col-start-1 row-start-2 col-span-4 flex min-h-[250px] items-center overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-8 shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 transition duration-500 hover:border-[var(--accent)] max-[820px]:col-start-auto max-[820px]:row-start-auto max-[820px]:col-span-6 max-[820px]:p-6 max-[600px]:col-span-full max-[600px]:min-h-[220px] max-[600px]:px-5">
+    <article className="glass-panel cyberspace-card group relative isolate col-start-1 row-start-2 col-span-4 flex min-h-[250px] items-center overflow-hidden rounded-[var(--card-radius)] border p-8 transition duration-500 hover:border-[var(--accent)] max-[820px]:col-start-auto max-[820px]:row-start-auto max-[820px]:col-span-6 max-[820px]:p-6 max-[600px]:col-span-full max-[600px]:min-h-[220px] max-[600px]:px-5">
       <video
         className="absolute inset-0 size-full object-cover"
         src="/assets/videos/moon.mp4"

@@ -9,7 +9,7 @@ export function ProfileCards() {
     <>
       <div className="col-span-4 grid min-h-[390px] grid-rows-2 gap-[var(--card-gap)] max-[820px]:col-span-5 max-[820px]:min-h-[360px] max-[600px]:col-span-full max-[600px]:grid-rows-[minmax(230px,1.1fr)_minmax(190px,0.9fr)] max-[600px]:min-h-[436px]">
         {siteConfig.home.showAvailability && (
-          <article className="flex min-h-0 flex-col overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[600px]:p-5">
+          <article className="glass-panel flex min-h-0 flex-col overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
             <span className="mb-auto grid size-[38px] place-items-center rounded-[13px] border border-[var(--line)] bg-[var(--raised)] text-base text-[var(--accent)]" aria-hidden="true">✳</span>
             <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.statusEyebrow}</p>
             <h2 className="mb-0 mt-3 text-[clamp(1.45rem,2.5vw,2rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
@@ -21,7 +21,7 @@ export function ProfileCards() {
           </article>
         )}
 
-        <article className="relative flex min-h-0 flex-col justify-center overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[600px]:p-5">
+        <article className="glass-panel relative flex min-h-0 flex-col justify-center overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
           <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.aboutEyebrow}</p>
           <h2 className="mb-0 mt-3 max-w-[340px] text-[clamp(1.6rem,3.15vw,2.5rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.role}</h2>
           <p className="my-2 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{profile.location}</p>
@@ -30,7 +30,7 @@ export function ProfileCards() {
       </div>
 
       {siteConfig.home.showSkills && (
-        <article className="col-start-5 col-span-8 overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[820px]:col-start-auto max-[820px]:col-span-6 max-[600px]:col-span-full max-[600px]:p-5">
+        <article className="glass-panel col-start-5 col-span-8 overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[820px]:col-start-auto max-[820px]:col-span-6 max-[600px]:col-span-full max-[600px]:p-5">
           <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.skillsEyebrow}</p>
           <div className="mt-[1.35rem] grid grid-cols-3 gap-4 max-[820px]:grid-cols-1 max-[820px]:gap-3.5 max-[600px]:grid-cols-2">
             {skills.map((group) => (

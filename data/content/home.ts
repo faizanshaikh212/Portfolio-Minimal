@@ -14,7 +14,7 @@ const home = {
   skillsEyebrow: "A FEW THINGS I WORK WITH",
   skillsTitle: "A few things I work with",
   projectsEyebrow: "PROJECTS & EXPERIMENTS",
-  projectsTitle: "Selected work",
+  projectsTitle: "Selected projects and work",
   contactTitle: "Have something in mind?",
   contactAction: "Let's make it real",
   projectOpenLabel: "open project",

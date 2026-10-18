@@ -3,6 +3,13 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.3.0 — 2026-10-25
+
+- Refresh the dark palette with near-black surfaces, soft cyan accents, and muted cool-gray text inspired by the provided reference.
+- Add a quiet, theme-aware grid and ambient glow behind the page in both light and dark modes.
+- Unify content cards under a shared translucent glass treatment with layered highlights, soft borders, backdrop blur, and inset lighting.
+- Keep the navigation bar sticky near its existing top position while scrolling.
+
 ## 0.2.2 — 2026-10-25
 
 - Increase supporting text sizes across navigation, status and skills cards, project details, contact content, and footer links while retaining the existing heading hierarchy.

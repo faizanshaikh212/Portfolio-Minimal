@@ -45,7 +45,7 @@ function ProjectPreview({ visual }: { visual: "lifeboat" | "academic" }) {
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className={`group overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] transition duration-200 hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--accent)_48%,var(--line))]`}>
+    <article className={`glass-panel group overflow-hidden rounded-[var(--card-radius)] border transition duration-200 hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--accent)_48%,var(--line))]`}>
       <a
         className="block h-full"
         href={project.href}

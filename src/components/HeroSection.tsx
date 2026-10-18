@@ -4,7 +4,7 @@ export function HeroSection() {
   const { profile, home } = content;
 
   return (
-    <article className="relative isolate col-span-8 flex min-h-[390px] items-center overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[clamp(1.75rem,5vw,3.5rem)] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[820px]:col-span-7 max-[820px]:min-h-[360px] max-[820px]:items-end max-[600px]:col-span-full max-[600px]:min-h-[400px] max-[600px]:p-6">
+    <article className="glass-panel relative isolate col-span-8 flex min-h-[390px] items-center overflow-hidden rounded-[var(--card-radius)] border p-[clamp(1.75rem,5vw,3.5rem)] max-[820px]:col-span-7 max-[820px]:min-h-[360px] max-[820px]:items-end max-[600px]:col-span-full max-[600px]:min-h-[400px] max-[600px]:p-6">
       <div className="relative z-[1] max-w-[570px]">
         <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">
           <span className="size-[7px] shrink-0 rounded-full bg-[#80b99a]" />
