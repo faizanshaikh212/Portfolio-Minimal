@@ -1,4 +1,5 @@
 import { ContactCards } from "./components/ContactCards";
+import { CyberspaceCard } from "./components/CyberspaceCard";
 import { HeroSection } from "./components/HeroSection";
 import { ProfileCards } from "./components/ProfileCards";
 import { ProjectsSection } from "./components/ProjectsSection";
@@ -20,6 +21,7 @@ export default function App() {
       <section className="mt-4 grid grid-cols-12 gap-[var(--card-gap)] max-[600px]:mt-3 max-[600px]:gap-3" id="top" aria-label="Introduction">
         <HeroSection />
         <ProfileCards />
+        <CyberspaceCard />
         <ProjectsSection />
         <ContactCards />
       </section>

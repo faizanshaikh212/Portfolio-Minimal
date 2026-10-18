@@ -32,7 +32,6 @@ export function HeroSection() {
           fetchPriority="high"
         />
       </div>
-      <span className="absolute bottom-[1.35rem] right-6 text-[0.58rem] tracking-[0.12em] text-[var(--muted)] max-[600px]:bottom-4 max-[600px]:right-4 max-[600px]:text-[0.5rem]">01 / PORTFOLIO</span>
     </article>
   );
 }

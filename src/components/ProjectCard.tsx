@@ -31,6 +31,18 @@ function ControllerPreview() {
   );
 }
 
+function ProjectPreview({ visual }: { visual: "lifeboat" | "academic" }) {
+  const isLifeboat = visual === "lifeboat";
+
+  return (
+    <div className={`grid size-[108px] place-items-center rounded-[30px] border border-white/20 shadow-[0_20px_42px_rgb(0_0_0_/_24%),inset_0_2px_2px_rgb(255_255_255_/_15%)] ${isLifeboat ? "rotate-[-8deg] bg-[linear-gradient(145deg,#79a9a6,#365b69)]" : "rotate-[6deg] bg-[linear-gradient(145deg,#6d8fb9,#354f77)]"}`}>
+      <span className={`font-serif text-3xl ${isLifeboat ? "text-[#e0f2e5]" : "font-sans text-xl font-semibold tracking-[-0.08em] text-[#e0edff]"}`}>
+        {isLifeboat ? "✳" : "AV"}
+      </span>
+    </div>
+  );
+}
+
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className={`group overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] transition duration-200 hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--accent)_48%,var(--line))]`}>
@@ -42,7 +54,13 @@ export function ProjectCard({ project }: { project: Project }) {
         aria-label={`${project.title} — ${content.home.projectOpenLabel}`}
       >
         <div className={`relative grid min-h-[190px] place-items-center overflow-hidden bg-[radial-gradient(ellipse_at_48%_80%,var(--project-glow),transparent_62%),var(--raised)] max-[600px]:min-h-[175px] ${project.visual === "finance" ? "[--project-glow:rgba(92,168,231,0.27)]" : "[--project-glow:rgba(102,145,220,0.26)]"}`} aria-hidden="true">
-          {project.visual === "finance" ? <FinancePreview /> : <ControllerPreview />}
+          {project.visual === "finance" ? (
+            <FinancePreview />
+          ) : project.visual === "controller" ? (
+            <ControllerPreview />
+          ) : (
+            <ProjectPreview visual={project.visual} />
+          )}
           <span className="absolute right-4 top-4 grid size-[30px] place-items-center rounded-full border border-[var(--line)] bg-[var(--surface)] text-[0.9rem] text-[var(--text)] backdrop-blur-xl">↗</span>
         </div>
         <div className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-[0.6rem] p-5">

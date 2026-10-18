@@ -13,11 +13,10 @@ const home = {
   locationLabel: "Currently creating from",
   skillsEyebrow: "A FEW THINGS I WORK WITH",
   skillsTitle: "A few things I work with",
-  projectsEyebrow: "A FEW RECENT BUILDS",
+  projectsEyebrow: "PROJECTS & EXPERIMENTS",
   projectsTitle: "Selected work",
   contactTitle: "Have something in mind?",
   contactAction: "Let's make it real",
-  projectCountLabel: "Selected projects",
   projectOpenLabel: "open project",
 };
 

@@ -7,28 +7,30 @@ export function ProfileCards() {
 
   return (
     <>
-      {siteConfig.home.showAvailability && (
-        <article className="col-span-4 flex min-h-[390px] flex-col overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[820px]:col-span-5 max-[820px]:min-h-[360px] max-[600px]:col-span-full max-[600px]:min-h-[230px] max-[600px]:p-5">
-          <span className="mb-auto grid size-[38px] place-items-center rounded-[13px] border border-[var(--line)] bg-[var(--raised)] text-base text-[var(--accent)] max-[600px]:mb-6" aria-hidden="true">✳</span>
-          <p className="m-0 flex items-center gap-[0.55rem] text-[0.65rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.statusEyebrow}</p>
-          <h2 className="mb-0 mt-3 text-[clamp(1.35rem,2.3vw,1.9rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
-          <p className="my-2 text-[0.83rem] leading-[1.65] text-[var(--muted)]">{home.availabilityLabel}</p>
-          <div className="mt-auto flex items-center gap-[0.6rem] border-t border-[var(--line)] pt-4 text-[0.72rem] text-[var(--muted)]">
-            <span className="relative size-[7px] shrink-0 rounded-full bg-[#80b99a] after:absolute after:-inset-1 after:animate-ping after:rounded-full after:border after:border-[#80b99a] after:content-[''] motion-reduce:after:animate-none" />
-            <span>{home.availabilityStatus}</span>
-          </div>
-        </article>
-      )}
+      <div className="col-span-4 grid min-h-[390px] grid-rows-2 gap-[var(--card-gap)] max-[820px]:col-span-5 max-[820px]:min-h-[360px] max-[600px]:col-span-full max-[600px]:grid-rows-[minmax(230px,1.1fr)_minmax(190px,0.9fr)] max-[600px]:min-h-[436px]">
+        {siteConfig.home.showAvailability && (
+          <article className="flex min-h-0 flex-col overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[600px]:p-5">
+            <span className="mb-auto grid size-[38px] place-items-center rounded-[13px] border border-[var(--line)] bg-[var(--raised)] text-base text-[var(--accent)]" aria-hidden="true">✳</span>
+            <p className="m-0 flex items-center gap-[0.55rem] text-[0.65rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.statusEyebrow}</p>
+            <h2 className="mb-0 mt-3 text-[clamp(1.35rem,2.3vw,1.9rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
+            <p className="my-2 text-[0.83rem] leading-[1.65] text-[var(--muted)]">{home.availabilityLabel}</p>
+            <div className="mt-auto flex items-center gap-[0.6rem] border-t border-[var(--line)] pt-4 text-[0.72rem] text-[var(--muted)]">
+              <span className="relative size-[7px] shrink-0 rounded-full bg-[#80b99a] after:absolute after:-inset-1 after:animate-ping after:rounded-full after:border after:border-[#80b99a] after:content-[''] motion-reduce:after:animate-none" />
+              <span>{home.availabilityStatus}</span>
+            </div>
+          </article>
+        )}
 
-      <article className="relative col-span-5 flex min-h-[218px] flex-col justify-center overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[820px]:col-span-6 max-[600px]:col-span-full max-[600px]:min-h-[190px] max-[600px]:p-5">
-        <p className="m-0 flex items-center gap-[0.55rem] text-[0.65rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.aboutEyebrow}</p>
-        <h2 className="mb-0 mt-3 max-w-[340px] text-[clamp(1.5rem,3vw,2.35rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.role}</h2>
-        <p className="my-2 text-[0.83rem] leading-[1.65] text-[var(--muted)]">{profile.location}</p>
-        <span className="absolute bottom-[1.15rem] right-6 text-[2.1rem] text-[var(--accent)] opacity-70" aria-hidden="true">✳</span>
-      </article>
+        <article className="relative flex min-h-0 flex-col justify-center overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[600px]:p-5">
+          <p className="m-0 flex items-center gap-[0.55rem] text-[0.65rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.aboutEyebrow}</p>
+          <h2 className="mb-0 mt-3 max-w-[340px] text-[clamp(1.5rem,3vw,2.35rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.role}</h2>
+          <p className="my-2 text-[0.83rem] leading-[1.65] text-[var(--muted)]">{profile.location}</p>
+          <span className="absolute bottom-[1.15rem] right-6 text-[2.1rem] text-[var(--accent)] opacity-70" aria-hidden="true">✳</span>
+        </article>
+      </div>
 
       {siteConfig.home.showSkills && (
-        <article className="col-span-7 overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[820px]:col-span-6 max-[600px]:col-span-full max-[600px]:p-5">
+        <article className="col-start-5 col-span-8 overflow-hidden rounded-[var(--card-radius)] border border-[var(--line)] bg-[var(--surface)] p-[1.6rem] shadow-[0_24px_70px_rgb(0_0_0_/_9%),inset_0_1px_0_rgb(255_255_255_/_5%)] backdrop-blur-2xl backdrop-saturate-150 max-[820px]:col-start-auto max-[820px]:col-span-6 max-[600px]:col-span-full max-[600px]:p-5">
           <p className="m-0 flex items-center gap-[0.55rem] text-[0.65rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.skillsEyebrow}</p>
           <div className="mt-[1.35rem] grid grid-cols-3 gap-4 max-[820px]:grid-cols-1 max-[820px]:gap-3.5 max-[600px]:grid-cols-2">
             {skills.map((group) => (

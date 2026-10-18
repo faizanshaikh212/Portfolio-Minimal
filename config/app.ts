@@ -40,6 +40,5 @@ export const siteConfig = {
     showAvailability: true,
     showSkills: true,
     showProjects: true,
-    projectLimit: 2,
   },
 } as const;

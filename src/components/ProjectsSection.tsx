@@ -5,7 +5,6 @@ import { ProjectCard } from "./ProjectCard";
 
 export function ProjectsSection() {
   const { home } = content;
-  const visibleProjects = projects.slice(0, siteConfig.home.projectLimit);
 
   if (!siteConfig.home.showProjects) {
     return null;
@@ -18,12 +17,9 @@ export function ProjectsSection() {
           <p className="m-0 flex items-center gap-[0.55rem] text-[0.65rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.projectsEyebrow}</p>
           <h2 className="mb-0 mt-2 text-[clamp(1.9rem,4vw,2.65rem)] font-medium tracking-[-0.07em]" id="work-title">{home.projectsTitle}</h2>
         </div>
-        <span className="text-xs text-[var(--muted)]" aria-label={home.projectCountLabel}>
-          {String(visibleProjects.length).padStart(2, "0")}
-        </span>
       </div>
       <div className="grid grid-cols-2 gap-[var(--card-gap)] max-[600px]:grid-cols-1 max-[600px]:gap-3">
-        {visibleProjects.map((project) => (
+        {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
