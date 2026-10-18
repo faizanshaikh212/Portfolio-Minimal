@@ -13,7 +13,7 @@ export function CyberspaceCard() {
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,12,27,0.7),rgba(4,12,27,0.18))]" aria-hidden="true" />
-      <h2 className="relative z-[1] m-0 max-w-[260px] text-[clamp(1.8rem,4vw,3rem)] font-medium tracking-[-0.06em] text-white">
+      <h2 className="relative z-[1] m-0 max-w-[260px] text-[clamp(2rem,4.2vw,3.2rem)] font-medium tracking-[-0.06em] text-white">
         Enter the cyberspace
       </h2>
     </article>

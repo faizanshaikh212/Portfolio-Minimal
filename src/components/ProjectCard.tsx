@@ -6,7 +6,7 @@ function FinancePreview() {
 
   return (
     <div className="flex min-h-[135px] w-[min(70%,340px)] flex-col justify-center rounded-t-2xl rounded-b-[4px] border border-white/15 bg-[linear-gradient(145deg,rgba(24,31,29,0.94),rgba(17,20,19,0.9))] px-5 pb-0 pt-[1.1rem] shadow-[0_18px_48px_rgb(0_0_0_/_22%)] [transform:perspective(800px)_rotateX(8deg)_rotateY(-8deg)]">
-      <span className="text-[0.52rem] tracking-[0.12em] text-[#9aa9a0]">TOTAL BALANCE</span>
+      <span className="text-[0.68rem] tracking-[0.12em] text-[#9aa9a0]">TOTAL BALANCE</span>
       <span className="mt-[0.45rem] text-xl font-medium tracking-[-0.04em] text-[#e7eee8]">$12,840.50</span>
       <span className="mt-[0.6rem] flex h-11 items-end gap-[5px] border-b border-white/10">
         {bars.map((height, index) => (
@@ -23,7 +23,7 @@ function ControllerPreview() {
       <span className="relative size-[34px] before:absolute before:left-1/2 before:top-1/2 before:h-[11px] before:w-[34px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[3px] before:bg-[#17171d] before:content-[''] after:absolute after:left-1/2 after:top-1/2 after:h-[34px] after:w-[11px] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-[3px] after:bg-[#17171d] after:content-['']">
         <i />
       </span>
-      <span className="text-[0.63rem] font-semibold tracking-[0.11em] text-[#c6e4ff]">MK</span>
+      <span className="text-[0.72rem] font-semibold tracking-[0.11em] text-[#c6e4ff]">MK</span>
       <span className="grid grid-cols-2 gap-2 [transform:rotate(18deg)] [&>i]:size-[9px] [&>i]:rounded-full [&>i]:bg-[#a9d5ff] [&>i]:shadow-[inset_0_1px_2px_rgb(255_255_255_/_50%)]">
         <i /><i /><i /><i />
       </span>
@@ -65,14 +65,14 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-[0.6rem] p-5">
           <div>
-            <p className="mb-[0.3rem] mt-0 text-[0.67rem] text-[var(--muted)]">{project.category}</p>
-            <h3 className="m-0 text-[1.15rem] font-medium tracking-[-0.04em]">{project.title}</h3>
+            <p className="mb-[0.3rem] mt-0 text-[0.78rem] text-[var(--muted)]">{project.category}</p>
+            <h3 className="m-0 text-[1.25rem] font-medium tracking-[-0.04em]">{project.title}</h3>
           </div>
-          <span className="text-[0.68rem] text-[var(--muted)]">{project.year}</span>
-          <p className="col-span-full m-0 max-w-[500px] text-[0.76rem] leading-[1.65] text-[var(--muted)]">{project.description}</p>
+          <span className="text-[0.78rem] text-[var(--muted)]">{project.year}</span>
+          <p className="col-span-full m-0 max-w-[500px] text-[0.9rem] leading-[1.65] text-[var(--muted)]">{project.description}</p>
           <div className="col-span-full flex flex-wrap gap-[0.4rem]" aria-label="Technologies">
             {project.technologies.map((technology) => (
-              <span className="inline-flex min-h-[26px] items-center rounded-full border border-[var(--line)] px-[0.58rem] py-1 text-[0.64rem] leading-tight text-[var(--muted)]" key={technology}>
+              <span className="inline-flex min-h-[30px] items-center rounded-full border border-[var(--line)] px-[0.65rem] py-1 text-[0.75rem] leading-tight text-[var(--muted)]" key={technology}>
                 {technology}
               </span>
             ))}

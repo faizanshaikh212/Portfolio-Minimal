@@ -3,6 +3,12 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.2.2 — 2026-10-25
+
+- Increase supporting text sizes across navigation, status and skills cards, project details, contact content, and footer links while retaining the existing heading hierarchy.
+- Set a legible 17px body-text baseline and adjust the hero portrait placement at tablet widths to prevent overlap with the larger type.
+- Remove the colored disk behind the navbar favicon so the transparent favicon displays without a background, and update its visibility on light theme.
+
 ## 0.2.1 — 2026-10-25
 
 - Reposition the About card directly beneath Current Status in the desktop bento grid.

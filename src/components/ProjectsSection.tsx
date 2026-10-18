@@ -14,8 +14,8 @@ export function ProjectsSection() {
     <section className="col-span-full scroll-mt-6 pt-10 max-[600px]:pt-6" id="work" aria-labelledby="work-title">
       <div className="mb-4 flex items-end justify-between px-1">
         <div>
-          <p className="m-0 flex items-center gap-[0.55rem] text-[0.65rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.projectsEyebrow}</p>
-          <h2 className="mb-0 mt-2 text-[clamp(1.9rem,4vw,2.65rem)] font-medium tracking-[-0.07em]" id="work-title">{home.projectsTitle}</h2>
+          <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.projectsEyebrow}</p>
+          <h2 className="mb-0 mt-2 text-[clamp(2.1rem,4.2vw,2.85rem)] font-medium tracking-[-0.07em]" id="work-title">{home.projectsTitle}</h2>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-[var(--card-gap)] max-[600px]:grid-cols-1 max-[600px]:gap-3">

@@ -31,6 +31,7 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--text);
+  font-size: 1.0625rem;
   background:
     radial-gradient(ellipse at 14% 0%, var(--ambient), transparent 40rem),
     var(--page);
