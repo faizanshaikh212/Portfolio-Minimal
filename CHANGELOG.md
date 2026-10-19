@@ -3,6 +3,13 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.4.0 — 2026-10-25
+
+- Switch the hero portrait by theme: animated `profile-dark.gif` in dark mode and `profile-light.jpg` in light mode.
+- Replace the CSS-drawn project preview artwork with the supplied dark/light project images; use optimized WebP copies for efficient loading.
+- Set the Cyberspace background to `gargantua.mp4` in dark mode and `clouds.mp4` in light mode, switching to `moon.mp4` while hovered.
+- Generate matching poster frames for the three videos and use them as video loading fallbacks.
+
 ## 0.3.1 — 2026-10-25
 
 - Increase the desktop content width from 1120px to 1220px so the cards, project grid, and footer have more horizontal space.

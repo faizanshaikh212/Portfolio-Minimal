@@ -2,8 +2,9 @@ import { siteConfig } from "../../config/app";
 import { content } from "../../data/content";
 import projects from "../../data/projects";
 import { ProjectCard } from "./ProjectCard";
+import type { Theme } from "../../config/app";
 
-export function ProjectsSection() {
+export function ProjectsSection({ theme }: { theme: Theme }) {
   const { home } = content;
 
   if (!siteConfig.home.showProjects) {
@@ -20,7 +21,7 @@ export function ProjectsSection() {
       </div>
       <div className="grid grid-cols-2 gap-[var(--card-gap)] max-[600px]:grid-cols-1 max-[600px]:gap-3">
         {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <ProjectCard key={project.title} project={project} theme={theme} />
         ))}
       </div>
     </section>

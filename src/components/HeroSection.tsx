@@ -1,6 +1,7 @@
 import { content } from "../../data/content";
+import type { Theme } from "../../config/app";
 
-export function HeroSection() {
+export function HeroSection({ theme }: { theme: Theme }) {
   const { profile, home } = content;
 
   return (
@@ -25,7 +26,7 @@ export function HeroSection() {
       <div className="absolute right-[4%] top-1/2 aspect-square w-[clamp(150px,24vw,230px)] -translate-y-1/2 overflow-hidden rounded-full shadow-[0_0_70px_var(--ambient)] max-[820px]:right-5 max-[820px]:top-5 max-[820px]:w-[clamp(100px,20vw,145px)] max-[820px]:translate-y-0 max-[600px]:right-5 max-[600px]:top-5 max-[600px]:w-[clamp(112px,34vw,160px)] max-[600px]:translate-y-0">
         <img
           className="block size-full rounded-full object-cover"
-          src="/assets/images/profile_glitched.gif"
+          src={theme === "dark" ? "/assets/images/profile-dark.gif" : "/assets/images/profile-light.jpg"}
           alt={`Portrait of ${profile.name}`}
           width="600"
           height="600"

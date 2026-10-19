@@ -5,7 +5,7 @@ export interface Project {
   description: string;
   technologies: string[];
   href: string;
-  visual: "finance" | "controller" | "lifeboat" | "academic";
+  images: Record<"dark" | "light", string>;
 }
 
 const projects: Project[] = [
@@ -17,7 +17,10 @@ const projects: Project[] = [
       "A local-first finance desk that brings everyday money data together without turning it into a social feed.",
     technologies: ["Electron", "React", "Tailwind CSS", "SQLite", "Zustand", "Recharts"],
     href: "https://financial-cryosis.vercel.app/",
-    visual: "finance",
+    images: {
+      dark: "/assets/images/financial-cryosis-dark.webp",
+      light: "/assets/images/financial-cryosis-light.webp",
+    },
   },
   {
     title: "Mobile Konekt",
@@ -27,7 +30,10 @@ const projects: Project[] = [
       "A browser-based controller that lets phones connect to Linux games, wired or wireless.",
     technologies: ["Electron", "React", "Tailwind CSS", "Cryptography", "WebSocket", "Evdev"],
     href: "https://github.com/faizanshaikh212/mobile-konekt",
-    visual: "controller",
+    images: {
+      dark: "/assets/images/mobile-konekt-dark.webp",
+      light: "/assets/images/mobile-konekt-light.webp",
+    },
   },
   {
     title: "LifeBoat",
@@ -37,7 +43,10 @@ const projects: Project[] = [
       "A privacy-first desktop app for everyday planning and personal life management, designed to work entirely offline.",
     technologies: ["Python", "PyQt6", "Peewee", "PyYAML"],
     href: "https://github.com/faiz-n-shk/LifeBoat",
-    visual: "lifeboat",
+    images: {
+      dark: "/assets/images/life-boat-dark.webp",
+      light: "/assets/images/life-boat-light.webp",
+    },
   },
   {
     title: "AcademicVault-Connect",
@@ -47,7 +56,10 @@ const projects: Project[] = [
       "A full-stack platform that helps students, teachers, and academic staff organize, share, and discover learning resources.",
     technologies: ["React", "Tailwind CSS", "Node.js", "Express", "Cloudinary", "MongoDB"],
     href: "https://academic-vault-connect.vercel.app/",
-    visual: "academic",
+    images: {
+      dark: "/assets/images/academic-vault-dark.webp",
+      light: "/assets/images/academic-vault-light.webp",
+    },
   },
 ];
 

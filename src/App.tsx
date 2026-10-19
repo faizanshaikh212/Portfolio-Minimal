@@ -20,10 +20,10 @@ export default function App() {
       <SiteHeader theme={theme} craters={craters} onToggleTheme={toggleTheme} />
       <div className="h-[68px] max-[600px]:h-[60px]" aria-hidden="true" />
       <section className="mt-4 grid grid-cols-12 gap-[var(--card-gap)] max-[600px]:mt-3 max-[600px]:gap-3" id="top" aria-label="Introduction">
-        <HeroSection />
+        <HeroSection theme={theme} />
         <ProfileCards />
-        <CyberspaceCard />
-        <ProjectsSection />
+        <CyberspaceCard theme={theme} />
+        <ProjectsSection theme={theme} />
         <ContactCards />
       </section>
       <SiteFooter />
