@@ -35,6 +35,7 @@ export function useSiteTheme(pageTitle: string): {
     root.style.colorScheme = theme;
     root.style.setProperty("--theme-transition", siteConfig.theme.transition);
     root.style.setProperty("--max-width", siteConfig.layout.maxWidth);
+    root.style.setProperty("--nav-max-width", siteConfig.layout.navMaxWidth);
     root.style.setProperty("--page-gutter", siteConfig.layout.pageGutter);
     root.style.setProperty("--card-radius", siteConfig.layout.cardRadius);
     root.style.setProperty("--card-gap", siteConfig.layout.cardGap);

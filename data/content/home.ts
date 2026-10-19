@@ -13,7 +13,7 @@ const home = {
   locationLabel: "Currently creating from",
   skillsEyebrow: "A FEW THINGS I WORK WITH",
   skillsTitle: "A few things I work with",
-  projectsEyebrow: "PROJECTS & EXPERIMENTS",
+  projectsEyebrow: "PROJECTS & EXPERIENCE",
   projectsTitle: "Selected projects and work",
   contactTitle: "Have something in mind?",
   contactAction: "Let's make it real",

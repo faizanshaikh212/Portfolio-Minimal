@@ -3,6 +3,12 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.3.1 — 2026-10-25
+
+- Increase the desktop content width from 1120px to 1220px so the cards, project grid, and footer have more horizontal space.
+- Widen the fixed navigation bar to align with the wider content container.
+- Preserve responsive side gutters and existing tablet/mobile grid breakpoints.
+
 ## 0.3.0 — 2026-10-25
 
 - Refresh the dark palette with near-black surfaces, soft cyan accents, and muted cool-gray text inspired by the provided reference.

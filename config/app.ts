@@ -4,7 +4,8 @@ export const siteConfig = {
   siteName: "Faizan Shaikh",
   defaultTheme: "dark" satisfies Theme,
   layout: {
-    maxWidth: "1120px",
+    maxWidth: "1220px",
+    navMaxWidth: "1220px",
     pageGutter: "clamp(1rem, 4vw, 2.25rem)",
     cardRadius: "28px",
     cardGap: "1rem",
