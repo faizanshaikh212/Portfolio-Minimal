@@ -3,6 +3,12 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.4.3 — 2026-10-25
+
+- Change the Cyberspace card prompt to “Click to Enter the Cyberspace”.
+- Wait one second of continuous hover before switching to the moon video.
+- Crossfade the two video layers over 900ms while both briefly blur up to 4px to create a soft, blended transition; honor reduced-motion preferences.
+
 ## 0.4.2 — 2026-10-25
 
 - Flow project cards in independent columns so each following card starts directly after the previous card in its column, without row-sized blank gaps.

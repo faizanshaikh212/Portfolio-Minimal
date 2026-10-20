@@ -59,6 +59,17 @@ body {
     box-shadow var(--theme-transition, 220ms) ease;
 }
 
+.cyberspace-video {
+  transition:
+    opacity 900ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyberspace-video {
+    transition: none;
+  }
+}
+
 ::selection {
   color: var(--page);
   background: var(--accent);
