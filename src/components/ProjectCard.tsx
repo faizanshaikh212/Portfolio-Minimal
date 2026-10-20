@@ -2,11 +2,22 @@ import { content } from "../../data/content";
 import type { Project } from "../../data/projects";
 import type { Theme } from "../../config/app";
 
-export function ProjectCard({ project, theme }: { project: Project; theme: Theme }) {
+export function ProjectCard({
+  project,
+  theme,
+  mobileOrder,
+}: {
+  project: Project;
+  theme: Theme;
+  mobileOrder: number;
+}) {
   return (
-    <article className={`glass-panel group overflow-hidden rounded-[var(--card-radius)] border transition duration-200 hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--accent)_48%,var(--line))]`}>
+    <article
+      className="glass-panel group h-fit self-start overflow-hidden rounded-[var(--card-radius)] border transition duration-200 hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--accent)_48%,var(--line))]"
+      style={{ order: mobileOrder }}
+    >
       <a
-        className="block h-full"
+        className="block"
         href={project.href}
         target="_blank"
         rel="noreferrer"

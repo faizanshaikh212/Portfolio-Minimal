@@ -19,9 +19,18 @@ export function ProjectsSection({ theme }: { theme: Theme }) {
           <h2 className="mb-0 mt-2 text-[clamp(2.1rem,4.2vw,2.85rem)] font-medium tracking-[-0.07em]" id="work-title">{home.projectsTitle}</h2>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-[var(--card-gap)] max-[600px]:grid-cols-1 max-[600px]:gap-3">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} theme={theme} />
+      <div className="grid grid-cols-2 items-start gap-[var(--card-gap)] max-[600px]:grid-cols-1 max-[600px]:gap-3">
+        {[projects.filter((_, index) => index % 2 === 0), projects.filter((_, index) => index % 2 === 1)].map((column, columnIndex) => (
+          <div className="grid min-w-0 content-start gap-[var(--card-gap)] max-[600px]:contents" key={columnIndex}>
+            {column.map((project) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                theme={theme}
+                mobileOrder={projects.indexOf(project)}
+              />
+            ))}
+          </div>
         ))}
       </div>
     </section>

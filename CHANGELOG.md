@@ -3,6 +3,11 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.4.2 — 2026-10-25
+
+- Flow project cards in independent columns so each following card starts directly after the previous card in its column, without row-sized blank gaps.
+- Preserve card widths and restore the original project order on narrow screens.
+
 ## 0.4.1 — 2026-10-25
 
 - Prevent project artwork from being cropped by fitting each theme-specific image fully inside its preview frame.
