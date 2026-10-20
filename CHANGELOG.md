@@ -3,6 +3,11 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.4.1 — 2026-10-25
+
+- Prevent project artwork from being cropped by fitting each theme-specific image fully inside its preview frame.
+- Retain uniform preview dimensions across the project grid while showing each image's complete composition.
+
 ## 0.4.0 — 2026-10-25
 
 - Switch the hero portrait by theme: animated `profile-dark.gif` in dark mode and `profile-light.jpg` in light mode.

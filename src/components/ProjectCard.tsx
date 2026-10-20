@@ -12,9 +12,9 @@ export function ProjectCard({ project, theme }: { project: Project; theme: Theme
         rel="noreferrer"
         aria-label={`${project.title} — ${content.home.projectOpenLabel}`}
       >
-        <div className="relative aspect-[16/9] min-h-[190px] overflow-hidden bg-[var(--raised)] max-[600px]:min-h-[175px]" aria-hidden="true">
+        <div className="relative overflow-hidden bg-[var(--raised)]" aria-hidden="true">
           <img
-            className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+            className="block h-auto w-full"
             src={project.images[theme]}
             alt=""
             loading="lazy"
