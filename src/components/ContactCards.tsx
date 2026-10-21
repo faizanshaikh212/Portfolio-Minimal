@@ -6,7 +6,6 @@ export function ContactCards() {
   return (
     <>
       <article className="glass-panel relative col-span-4 flex min-h-[200px] flex-col justify-end overflow-hidden rounded-[var(--card-radius)] border p-6 max-[820px]:col-span-5 max-[600px]:col-span-full max-[600px]:min-h-[180px] max-[600px]:p-5">
-        <span className="absolute right-5 top-5 text-[2rem] text-[var(--accent)] opacity-70" aria-hidden="true">◎</span>
         <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.locationLabel}</p>
         <h2 className="mb-0 mt-3 text-[2.5rem] font-medium leading-[1.18] tracking-[-0.055em]">{profile.city}</h2>
         <p className="my-2 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{profile.timezone}</p>

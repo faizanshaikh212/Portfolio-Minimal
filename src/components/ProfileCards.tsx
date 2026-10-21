@@ -10,7 +10,7 @@ export function ProfileCards() {
       <div className="col-span-4 grid min-h-[390px] grid-rows-2 gap-[var(--card-gap)] max-[820px]:col-span-5 max-[820px]:min-h-[360px] max-[600px]:col-span-full max-[600px]:grid-rows-[minmax(230px,1.1fr)_minmax(190px,0.9fr)] max-[600px]:min-h-[436px]">
         {siteConfig.home.showAvailability && (
           <article className="glass-panel flex min-h-0 flex-col overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
-            <span className="mb-auto grid size-[38px] place-items-center rounded-[13px] border border-[var(--line)] bg-[var(--raised)] text-base text-[var(--accent)]" aria-hidden="true">✳</span>
+            <span className="mb-auto grid size-[38px] place-items-center rounded-[13px] border border-[var(--line)] bg-[var(--raised)] text-base text-[var(--accent)]" aria-hidden="true"><span className="asterisk-spin">✳</span></span>
             <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.statusEyebrow}</p>
             <h2 className="mb-0 mt-3 text-[clamp(1.45rem,2.5vw,2rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
             <p className="my-2 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{home.availabilityLabel}</p>
@@ -25,7 +25,7 @@ export function ProfileCards() {
           <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.aboutEyebrow}</p>
           <h2 className="mb-0 mt-3 max-w-[340px] text-[clamp(1.6rem,3.15vw,2.5rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.role}</h2>
           <p className="my-2 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{profile.location}</p>
-          <span className="absolute bottom-[1.15rem] right-6 text-[2.1rem] text-[var(--accent)] opacity-70" aria-hidden="true">✳</span>
+          <span className="absolute bottom-[1.15rem] right-6 text-[2.1rem] text-[var(--accent)] opacity-70" aria-hidden="true"><span className="asterisk-spin">✳</span></span>
         </article>
       </div>
 

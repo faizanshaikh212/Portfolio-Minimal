@@ -3,6 +3,10 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.5.1 — 2026-10-25
+
+- Add a subtle continuous spin to the decorative asterisk marks and disable it for reduced-motion preferences.
+
 ## 0.5.0 — 2026-10-25
 
 - Extract footer icon rendering and Discord clipboard interaction into dedicated components.

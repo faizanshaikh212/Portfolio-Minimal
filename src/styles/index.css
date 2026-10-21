@@ -64,6 +64,18 @@ body {
     opacity 900ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.asterisk-spin {
+  display: inline-block;
+  transform-origin: center;
+  animation: asterisk-spin 12s linear infinite;
+}
+
+@keyframes asterisk-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .footer-icon-link {
   position: relative;
   display: inline-flex;
@@ -160,6 +172,10 @@ button.footer-icon-link {
 @media (prefers-reduced-motion: reduce) {
   .cyberspace-video {
     transition: none;
+  }
+
+  .asterisk-spin {
+    animation: none;
   }
 
   .footer-icon-link,
