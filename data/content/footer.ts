@@ -6,6 +6,7 @@ const footer = {
     linkedin: "LinkedIn",
     email: "Email",
     discord: "Discord",
+    website: "Website",
   },
 };
 

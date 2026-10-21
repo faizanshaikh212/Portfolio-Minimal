@@ -3,6 +3,13 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.4.4 — 2026-10-25
+
+- Move the Cyberspace card label into the centralized home content data.
+- Link the Cyberspace card and footer Website link to the portfolio website.
+- Replace footer link text with accessible icons and hover tooltips, using the site favicon for the Website link.
+- Refine footer icon assets, align text and icons along their bottom edge, and improve contrast in the light theme.
+
 ## 0.4.3 — 2026-10-25
 
 - Change the Cyberspace card prompt to “Click to Enter the Cyberspace”.

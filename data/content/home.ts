@@ -18,6 +18,7 @@ const home = {
   contactTitle: "Have something in mind?",
   contactAction: "Let's make it real",
   projectOpenLabel: "open project",
+  cyberspaceLabel: "Enter the Cyberspace",
 };
 
 export default home;

@@ -10,6 +10,7 @@ const profile = {
   links: {
     github: "https://github.com/faizanshaikh212",
     linkedin: "https://www.linkedin.com/in/faizan-shaikh-3896b7291",
+    website: "https://faizanshaikh212.vercel.app"
   },
   discord: "xtg212",
 };
