@@ -1,12 +1,6 @@
 import { content } from "../../data/content";
-
-type FooterIconName = "website" | "github" | "linkedin" | "email" | "discord";
-
-function FooterIcon({ name }: { name: FooterIconName }) {
-  return (
-    <span className={`footer-icon-mark footer-icon-mark--${name}`} aria-hidden="true" />
-  );
-}
+import { DiscordCopyButton } from "./DiscordCopyButton";
+import { FooterIcon } from "./FooterIcon";
 
 export function SiteFooter() {
   const { footer, profile } = content;
@@ -28,9 +22,7 @@ export function SiteFooter() {
         <a className="footer-icon-link" href={`mailto:${profile.email}`} aria-label={footer.links.email} data-tooltip={footer.links.email} title={footer.links.email}>
           <FooterIcon name="email" />
         </a>
-        <span className="footer-icon-link" role="img" aria-label={`${footer.links.discord}: ${profile.discord}`} data-tooltip={`${footer.links.discord} · ${profile.discord}`} title={`${footer.links.discord} · ${profile.discord}`}>
-          <FooterIcon name="discord" />
-        </span>
+        <DiscordCopyButton />
       </div>
     </footer>
   );

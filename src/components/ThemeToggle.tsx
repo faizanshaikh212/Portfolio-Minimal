@@ -36,7 +36,6 @@ export function createCraterLayout(
   }
 
   const sizes = [...REFERENCE_CRATER_SIZES];
-
   if (Math.random() >= variationChance) {
     return INITIAL_CRATERS;
   }
@@ -66,10 +65,10 @@ export function ThemeToggle({
   onToggle: () => void;
 }) {
   const isDark = theme === "dark";
-  const toggleId = useId().replaceAll(":", "");
-  const cloudBackGradientId = `${toggleId}-cloud-back`;
-  const cloudFrontGradientId = `${toggleId}-cloud-front`;
-  const rimGradientId = `${toggleId}-rim`;
+  const id = useId().replaceAll(":", "");
+  const cloudBackGradientId = `${id}-cloud-back`;
+  const cloudFrontGradientId = `${id}-cloud-front`;
+  const rimGradientId = `${id}-rim`;
 
   return (
     <button
@@ -81,13 +80,11 @@ export function ThemeToggle({
       className="relative inline-block h-8 w-16 shrink-0 select-none overflow-hidden rounded-full border-0 bg-transparent p-0 align-middle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
       style={{
         touchAction: "manipulation",
-        boxShadow:
-          isDark
-            ? "inset 0 2px 3px rgba(0, 0, 0, 0.32), inset 0 -1px 2px rgba(120, 150, 190, 0.16)"
-            : "inset 0 2px 3px rgba(0, 56, 112, 0.24), inset 0 -1px 2px rgba(255, 255, 255, 0.58)",
+        boxShadow: isDark
+          ? "inset 0 2px 3px rgba(0, 0, 0, 0.32), inset 0 -1px 2px rgba(120, 150, 190, 0.16)"
+          : "inset 0 2px 3px rgba(0, 56, 112, 0.24), inset 0 -1px 2px rgba(255, 255, 255, 0.58)",
       }}
     >
-      {/* Sky layers */}
       <span
         aria-hidden
         className="absolute inset-0 transition-opacity duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
@@ -108,8 +105,6 @@ export function ThemeToggle({
           background: "#081326",
         }}
       />
-
-      {/* Stars and sparkles (dark mode only) */}
       <span
         aria-hidden
         className="absolute inset-0 transition-opacity duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
@@ -119,9 +114,9 @@ export function ThemeToggle({
           opacity: isDark ? 1 : 0,
         }}
       >
-        {STARS.map((star, i) => (
+        {STARS.map((star, index) => (
           <span
-            key={i}
+            key={index}
             className="absolute rounded-full bg-white"
             style={{
               top: star.top,
@@ -166,8 +161,6 @@ export function ThemeToggle({
           }}
         />
       </span>
-
-      {/* Clouds (light mode only) */}
       <span
         aria-hidden
         className="absolute inset-0 transition-opacity duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
@@ -209,8 +202,6 @@ export function ThemeToggle({
           />
         </svg>
       </span>
-
-      {/* Celestial body: travels left (sun) to right (moon) */}
       <span
         aria-hidden
         className="absolute top-1/2 h-6 w-6 transition-transform duration-(--duration-slow) ease-[var(--ease-in-out)] motion-reduce:transition-none"
@@ -226,10 +217,8 @@ export function ThemeToggle({
           style={{
             transitionDuration: "var(--duration-base)",
             opacity: isDark ? 0 : 1,
-            background:
-              "linear-gradient(145deg, #fff4a8 0%, #ffe34a 36%, #ffd02a 72%, #f6b51b 100%)",
-            boxShadow:
-              "0.75px 1px 0.6px rgba(61, 47, 0, 0.44), inset 0 1px 1.25px rgba(255, 255, 225, 0.96), inset 1px 0 1px rgba(255, 255, 205, 0.46), inset 0 -1.75px 1.25px rgba(190, 112, 0, 0.4)",
+            background: "linear-gradient(145deg, #fff4a8 0%, #ffe34a 36%, #ffd02a 72%, #f6b51b 100%)",
+            boxShadow: "0.75px 1px 0.6px rgba(61, 47, 0, 0.44), inset 0 1px 1.25px rgba(255, 255, 225, 0.96), inset 1px 0 1px rgba(255, 255, 205, 0.46), inset 0 -1.75px 1.25px rgba(190, 112, 0, 0.4)",
           }}
         />
         <span
@@ -237,10 +226,8 @@ export function ThemeToggle({
           style={{
             transitionDuration: "var(--duration-base)",
             opacity: isDark ? 1 : 0,
-            background:
-              "linear-gradient(145deg, #ffffff 0%, #edf4fd 42%, #d5e2f2 100%)",
-            boxShadow:
-              "0 2px 4px rgba(0, 0, 10, 0.34), inset 0 1px 1.25px rgba(255, 255, 255, 1), inset 1px 0 1.1px rgba(255, 255, 255, 0.55), inset 0 -1.75px 1.25px rgba(67, 91, 125, 0.4)",
+            background: "linear-gradient(145deg, #ffffff 0%, #edf4fd 42%, #d5e2f2 100%)",
+            boxShadow: "0 2px 4px rgba(0, 0, 10, 0.34), inset 0 1px 1.25px rgba(255, 255, 255, 1), inset 1px 0 1.1px rgba(255, 255, 255, 0.55), inset 0 -1.75px 1.25px rgba(67, 91, 125, 0.4)",
           }}
         />
         {craters.map((crater, index) => (
@@ -253,21 +240,14 @@ export function ThemeToggle({
               height: crater.size,
               top: crater.top,
               left: crater.left,
-              boxShadow:
-                "inset 0 1px 1px rgba(32, 48, 70, 0.36), inset 0 -1px 1px rgba(255, 255, 255, 0.32)",
+              boxShadow: "inset 0 1px 1px rgba(32, 48, 70, 0.36), inset 0 -1px 1px rgba(255, 255, 255, 0.32)",
               opacity: isDark ? 1 : 0,
               transitionDuration: "var(--duration-base)",
             }}
           />
         ))}
       </span>
-
-      <svg
-        aria-hidden
-        viewBox="0 0 64 32"
-        preserveAspectRatio="none"
-        className="pointer-events-none absolute inset-0 size-full"
-      >
+      <svg aria-hidden viewBox="0 0 64 32" preserveAspectRatio="none" className="pointer-events-none absolute inset-0 size-full">
         <defs>
           <linearGradient id={rimGradientId} x1="0" y1="0" x2="0" y2="1">
             <stop

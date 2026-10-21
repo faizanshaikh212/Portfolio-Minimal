@@ -3,6 +3,15 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.5.0 — 2026-10-25
+
+- Extract footer icon rendering and Discord clipboard interaction into dedicated components.
+- Move Cyberspace hover timing and video blur transitions into a reusable hook.
+
+## 0.4.5 — 2026-10-25
+
+- Make the Discord footer icon copy the username and temporarily change its tooltip to “Copied”.
+
 ## 0.4.4 — 2026-10-25
 
 - Move the Cyberspace card label into the centralized home content data.

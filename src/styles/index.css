@@ -71,7 +71,11 @@ body {
   height: 1.5rem;
   align-items: flex-end;
   justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--text);
+  font: inherit;
   cursor: default;
   transition: color 180ms ease;
 }
@@ -114,6 +118,10 @@ body {
 }
 
 a.footer-icon-link {
+  cursor: pointer;
+}
+
+button.footer-icon-link {
   cursor: pointer;
 }
 
