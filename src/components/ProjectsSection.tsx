@@ -11,6 +11,11 @@ export function ProjectsSection({ theme }: { theme: Theme }) {
     return null;
   }
 
+  const orderedProjects = projects.map((project, mobileOrder) => ({
+    project,
+    mobileOrder,
+  }));
+
   return (
     <section className="col-span-full scroll-mt-6 pt-10 max-[600px]:pt-6" id="work" aria-labelledby="work-title">
       <div className="mb-4 flex items-end justify-between px-1">
@@ -20,14 +25,14 @@ export function ProjectsSection({ theme }: { theme: Theme }) {
         </div>
       </div>
       <div className="grid grid-cols-2 items-start gap-[var(--card-gap)] max-[600px]:grid-cols-1 max-[600px]:gap-3">
-        {[projects.filter((_, index) => index % 2 === 0), projects.filter((_, index) => index % 2 === 1)].map((column, columnIndex) => (
+        {[orderedProjects.filter((_, index) => index % 2 === 0), orderedProjects.filter((_, index) => index % 2 === 1)].map((column, columnIndex) => (
           <div className="grid min-w-0 content-start gap-[var(--card-gap)] max-[600px]:contents" key={columnIndex}>
-            {column.map((project) => (
+            {column.map(({ project, mobileOrder }) => (
               <ProjectCard
                 key={project.title}
                 project={project}
                 theme={theme}
-                mobileOrder={projects.indexOf(project)}
+                mobileOrder={mobileOrder}
               />
             ))}
           </div>

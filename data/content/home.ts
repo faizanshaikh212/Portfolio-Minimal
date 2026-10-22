@@ -12,7 +12,6 @@ const home = {
   aboutEyebrow: "A LITTLE ABOUT ME",
   locationLabel: "Currently creating from",
   skillsEyebrow: "A FEW THINGS I WORK WITH",
-  skillsTitle: "A few things I work with",
   projectsEyebrow: "PROJECTS & EXPERIENCE",
   projectsTitle: "Selected projects and work",
   contactEyebrow: "HAVE A GOOD IDEA IN MIND?",

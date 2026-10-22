@@ -3,6 +3,12 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.6.0 — 2026-10-25
+
+- Remove unused and duplicated content fields; use the profile name as the single source for the header identity.
+- Avoid repeated project-index searches when assigning mobile display order.
+- Consolidate duplicate footer icon cursor rules without changing styling.
+
 ## 0.5.3 — 2026-10-25
 
 - Centralize remaining page and accessibility copy in content data, and keep website metadata in `config/app.ts` for both the app title and generated HTML.

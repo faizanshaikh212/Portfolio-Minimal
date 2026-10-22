@@ -16,7 +16,7 @@ export interface MoonCrater {
   left: number;
 }
 
-export const CRATER_SIZE_VARIATION_CHANCE = 0.3;
+const CRATER_SIZE_VARIATION_CHANCE = 0.3;
 const CRATER_POSITIONS = [
   { top: 4.5, left: 11 },
   { top: 10.5, left: 4.5 },

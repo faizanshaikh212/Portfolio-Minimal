@@ -1,6 +1,5 @@
 const profile = {
   name: "Faizan Shaikh",
-  monogram: "fs",
   role: "Creative developer & digital explorer",
   location: "Pune, Maharashtra, India",
   city: "Pune",

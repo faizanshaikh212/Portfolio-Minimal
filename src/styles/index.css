@@ -129,10 +129,7 @@ body {
   -webkit-mask-image: url("/assets/icons/discord.svg");
 }
 
-a.footer-icon-link {
-  cursor: pointer;
-}
-
+a.footer-icon-link,
 button.footer-icon-link {
   cursor: pointer;
 }
