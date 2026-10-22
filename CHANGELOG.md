@@ -3,9 +3,13 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.5.3 — 2026-10-25
+
+- Centralize remaining page and accessibility copy in content data, and keep website metadata in `config/app.ts` for both the app title and generated HTML.
+
 ## 0.5.2 — 2026-10-25
 
-- Rebalance the location card's label, city, and timezone vertically to remove the oversized blank area above its content.
+- Rebalance the location card's content and match its typography to the adjacent contact card while preserving the original card proportions.
 
 ## 0.5.1 — 2026-10-25
 

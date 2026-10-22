@@ -40,7 +40,7 @@ export function ProjectCard({
           </div>
           <span className="text-[0.78rem] text-[var(--muted)]">{project.year}</span>
           <p className="col-span-full m-0 max-w-[500px] text-[0.9rem] leading-[1.65] text-[var(--muted)]">{project.description}</p>
-          <div className="col-span-full flex flex-wrap gap-[0.4rem]" aria-label="Technologies">
+          <div className="col-span-full flex flex-wrap gap-[0.4rem]" aria-label={content.accessibility.projectTechnologies}>
             {project.technologies.map((technology) => (
               <span className="inline-flex min-h-[30px] items-center rounded-full border border-[var(--line)] px-[0.65rem] py-1 text-[0.75rem] leading-tight text-[var(--muted)]" key={technology}>
                 {technology}

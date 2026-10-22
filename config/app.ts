@@ -1,7 +1,15 @@
 export type Theme = "light" | "dark";
 
+const siteName = "Faizan Shaikh";
+
 export const siteConfig = {
-  siteName: "Faizan Shaikh",
+  siteName,
+  metadata: {
+    title: `${siteName}`,
+    description:
+      "Faizan Shaikh is a creative developer building thoughtful digital experiences through expressive code and design.",
+    author: siteName,
+  },
   defaultTheme: "dark" satisfies Theme,
   layout: {
     maxWidth: "1220px",

@@ -1,4 +1,5 @@
 import { useId } from "react";
+import { content } from "../../data/content";
 
 const STARS = [
   { top: "47%", left: "12%", size: 1.5 },
@@ -75,7 +76,7 @@ export function ThemeToggle({
       type="button"
       role="switch"
       aria-checked={isDark}
-      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      aria-label={isDark ? content.accessibility.themeSwitchToLight : content.accessibility.themeSwitchToDark}
       onClick={onToggle}
       className="relative inline-block h-8 w-16 shrink-0 select-none overflow-hidden rounded-full border-0 bg-transparent p-0 align-middle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
       style={{

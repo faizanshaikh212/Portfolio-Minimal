@@ -27,7 +27,7 @@ export function HeroSection({ theme }: { theme: Theme }) {
         <img
           className="block size-full rounded-full object-cover"
           src={theme === "dark" ? "/assets/images/profile-dark.gif" : "/assets/images/profile-light.jpg"}
-          alt={`Portrait of ${profile.name}`}
+          alt={`${content.accessibility.portraitAltPrefix} ${profile.name}`}
           width="600"
           height="600"
           fetchPriority="high"

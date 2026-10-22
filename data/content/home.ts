@@ -15,10 +15,12 @@ const home = {
   skillsTitle: "A few things I work with",
   projectsEyebrow: "PROJECTS & EXPERIENCE",
   projectsTitle: "Selected projects and work",
+  contactEyebrow: "HAVE A GOOD IDEA IN MIND?",
   contactTitle: "Have something in mind?",
   contactAction: "Let's make it real",
   projectOpenLabel: "open project",
   cyberspaceLabel: "Enter the Cyberspace",
+  cyberspaceLinkLabel: "Visit portfolio website through Cyberspace",
 };
 
 export default home;

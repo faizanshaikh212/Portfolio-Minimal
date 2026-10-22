@@ -7,9 +7,9 @@ export function DiscordCopyButton() {
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
   const statusTimer = useRef<number | null>(null);
   const tooltip = copyStatus === "copied"
-    ? "Copied"
+    ? footer.copiedTooltip
     : copyStatus === "error"
-      ? "Copy failed"
+      ? footer.copyFailedTooltip
       : `${footer.links.discord} · ${profile.discord}`;
 
   function setTemporaryStatus(status: "copied" | "error") {
@@ -46,7 +46,7 @@ export function DiscordCopyButton() {
     <button
       className="footer-icon-link"
       type="button"
-      aria-label={copyStatus === "copied" ? "Discord username copied" : `Copy Discord username ${profile.discord}`}
+      aria-label={copyStatus === "copied" ? content.accessibility.discordUsernameCopied : `${content.accessibility.copyDiscordUsername} ${profile.discord}`}
       aria-live="polite"
       data-tooltip={tooltip}
       title={tooltip}
