@@ -3,6 +3,10 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.6.2 — 2026-10-25
+
+- Remove the green dot from the hero eyebrow and align the hero copy consistently along the left edge.
+
 ## 0.6.1 — 2026-10-25
 
 - Optically align the hero headline and introduction with the neighboring copy.
