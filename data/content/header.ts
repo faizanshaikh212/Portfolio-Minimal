@@ -1,6 +1,6 @@
 const header = {
-  workLabel: "Selected work and projects",
-  contactLabel: "Get in touch",
+  homeLabel: "Home",
+  aboutLabel: "About",
   navigationLabel: "Main navigation",
 };
 

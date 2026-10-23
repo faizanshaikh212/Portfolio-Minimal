@@ -3,6 +3,12 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.7.0 — 2026-10-25
+
+- Add Home and About pages with navigation and direct `/about` routing.
+- Add configurable About sections and profile, skills, experience, and education content sourced from Portfolio_CyberSpace.
+- Simplify the About layout by moving its profile subtitle above the portrait and removing the redundant heading, skill chips, and overview pill.
+
 ## 0.6.2 — 2026-10-25
 
 - Remove the green dot from the hero eyebrow and align the hero copy consistently along the left edge.

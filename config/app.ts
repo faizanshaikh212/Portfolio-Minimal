@@ -54,4 +54,10 @@ export const siteConfig = {
     showSkills: true,
     showProjects: true,
   },
+  about: {
+    showProfile: true,
+    showOverview: true,
+    showExperience: true,
+    showEducation: true,
+  },
 } as const;

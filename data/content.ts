@@ -3,6 +3,7 @@ import header from "./content/header";
 import home from "./content/home";
 import profile from "./content/profile";
 import accessibility from "./content/accessibility";
+import about from "./content/about";
 
 export const content = {
   accessibility,
@@ -10,4 +11,5 @@ export const content = {
   header,
   home,
   footer,
+  about,
 };
