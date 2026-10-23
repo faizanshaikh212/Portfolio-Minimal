@@ -3,6 +3,11 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.6.1 — 2026-10-25
+
+- Optically align the hero headline and introduction with the neighboring copy.
+- Remove the availability-card badge and evenly space its remaining content without changing card dimensions.
+
 ## 0.6.0 — 2026-10-25
 
 - Remove unused and duplicated content fields; use the profile name as the single source for the header identity.

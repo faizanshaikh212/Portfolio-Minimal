@@ -9,12 +9,11 @@ export function ProfileCards() {
     <>
       <div className="col-span-4 grid min-h-[390px] grid-rows-2 gap-[var(--card-gap)] max-[820px]:col-span-5 max-[820px]:min-h-[360px] max-[600px]:col-span-full max-[600px]:grid-rows-[minmax(230px,1.1fr)_minmax(190px,0.9fr)] max-[600px]:min-h-[436px]">
         {siteConfig.home.showAvailability && (
-          <article className="glass-panel flex min-h-0 flex-col overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
-            <span className="mb-auto grid size-[38px] place-items-center rounded-[13px] border border-[var(--line)] bg-[var(--raised)] text-base text-[var(--accent)]" aria-hidden="true"><span className="asterisk-spin">✳</span></span>
+          <article className="glass-panel flex min-h-0 flex-col justify-between overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
             <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.statusEyebrow}</p>
-            <h2 className="mb-0 mt-3 text-[clamp(1.45rem,2.5vw,2rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
-            <p className="my-2 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{home.availabilityLabel}</p>
-            <div className="mt-auto flex items-center gap-[0.6rem] border-t border-[var(--line)] pt-4 text-[0.82rem] text-[var(--muted)]">
+            <h2 className="m-0 text-[clamp(1.45rem,2.5vw,2rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
+            <p className="m-0 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{home.availabilityLabel}</p>
+            <div className="flex items-center gap-[0.6rem] border-t border-[var(--line)] pt-4 text-[0.82rem] text-[var(--muted)]">
               <span className="relative size-[7px] shrink-0 rounded-full bg-[#80b99a] after:absolute after:-inset-1 after:animate-ping after:rounded-full after:border after:border-[#80b99a] after:content-[''] motion-reduce:after:animate-none" />
               <span>{home.availabilityStatus}</span>
             </div>

@@ -12,8 +12,8 @@ export function HeroSection({ theme }: { theme: Theme }) {
           {home.eyebrow}
         </p>
         <p className="mb-[0.35rem] mt-8 text-lg text-[var(--muted)] max-[600px]:mt-[1.6rem]">{home.greeting}</p>
-        <h1 className="m-0 whitespace-pre-line text-[clamp(3.9rem,8.75vw,7.4rem)] font-medium leading-[0.91] tracking-[-0.09em] max-[820px]:text-[clamp(3.1rem,8vw,4.5rem)] max-[600px]:text-[clamp(4rem,19vw,6rem)]">{home.headline}</h1>
-        <p className="mb-0 mt-5 max-w-[430px] text-[1.05rem] leading-[1.75] text-[var(--muted)] max-[600px]:max-w-[320px] max-[600px]:text-[0.95rem]">{home.introduction}</p>
+        <h1 className="-ml-[0.045em] m-0 whitespace-pre-line text-[clamp(3.9rem,8.75vw,7.4rem)] font-medium leading-[0.91] tracking-[-0.09em] max-[820px]:text-[clamp(3.1rem,8vw,4.5rem)] max-[600px]:text-[clamp(4rem,19vw,6rem)]">{home.headline}</h1>
+        <p className="-ml-[0.08em] mb-0 mt-5 max-w-[430px] text-[1.05rem] leading-[1.75] text-[var(--muted)] max-[600px]:max-w-[320px] max-[600px]:text-[0.95rem]">{home.introduction}</p>
         <div className="mt-[1.65rem] flex items-center gap-[1.3rem]">
           <a className="inline-flex min-h-[46px] items-center gap-3 rounded-full bg-[var(--text)] px-4 text-[0.9rem] font-semibold text-[var(--page)] transition-colors duration-200 hover:-translate-y-0.5 hover:bg-[var(--text)]" href="#work">
             {home.primaryAction} <span aria-hidden="true">↗</span>
