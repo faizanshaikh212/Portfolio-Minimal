@@ -3,6 +3,11 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.8.0 — 2026-10-25
+
+- Add a live decimal age display to the About profile card, with date of birth configurable in `config/app.ts`.
+- Show the age to eight decimal places in the fourth matching profile stat card.
+
 ## 0.7.2 — 2026-10-25
 
 - Center Home/About navigation links in the header and add softer theme-specific active/hover states.

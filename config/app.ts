@@ -70,6 +70,8 @@ export const siteConfig = {
   },
   about: {
     showProfile: true,
+    showAge: true,
+    dateOfBirth: "2005-12-02",
     showOverview: true,
     showExperience: true,
     showEducation: true,

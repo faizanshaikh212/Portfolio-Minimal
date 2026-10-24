@@ -2,6 +2,7 @@ import { content } from "../../data/content";
 import education from "../../data/education";
 import experience from "../../data/experience";
 import stats from "../../data/stats";
+import { AgeCounter } from "../components/AgeCounter";
 import { siteConfig } from "../../config/app";
 import type { Theme } from "../../config/app";
 
@@ -31,10 +32,18 @@ export function AboutPage({ theme }: { theme: Theme }) {
             <div className="mt-5 grid grid-cols-2 gap-2">
               {stats.map((stat) => (
                 <div className="rounded-2xl border border-[var(--line)] p-3" key={stat.label}>
-                  <strong className="block text-2xl font-semibold">{stat.value}</strong>
+                  <strong className={`block font-semibold ${stat.value === "∞" ? "text-3xl leading-none" : "text-2xl"}`}>{stat.value}</strong>
                   <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-[var(--muted)]">{stat.label}</span>
                 </div>
               ))}
+              {config.showAge && (
+                <div className="rounded-2xl border border-[var(--line)] p-3" aria-label={about.ageLabel}>
+                  <strong className="block text-2xl font-semibold">
+                    <AgeCounter dateOfBirth={siteConfig.about.dateOfBirth} />
+                  </strong>
+                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-[var(--muted)]">{about.ageLabel} · {about.ageSuffix}</span>
+                </div>
+              )}
             </div>
           </aside>
         )}
