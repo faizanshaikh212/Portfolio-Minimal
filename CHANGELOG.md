@@ -3,6 +3,10 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.7.1 — 2026-10-25
+
+- Keep the About profile card sticky below the navigation while the page scrolls on wider screens; restore normal flow on mobile.
+
 ## 0.7.0 — 2026-10-25
 
 - Add Home and About pages with navigation and direct `/about` routing.

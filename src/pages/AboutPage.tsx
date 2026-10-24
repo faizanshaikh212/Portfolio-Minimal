@@ -13,7 +13,7 @@ export function AboutPage({ theme }: { theme: Theme }) {
     <div className="mt-8 space-y-4 pb-12 max-[600px]:mt-5">
       <div className="grid grid-cols-12 items-start gap-[var(--card-gap)] max-[760px]:grid-cols-1">
         {config.showProfile && (
-          <aside className="glass-panel col-span-4 rounded-[var(--card-radius)] border p-5 max-[760px]:col-span-1">
+          <aside className="glass-panel sticky top-[7.5rem] col-span-4 rounded-[var(--card-radius)] border p-5 max-[760px]:static max-[760px]:col-span-1">
             <h1 className="mb-4 mt-0 text-xl font-semibold tracking-tight">{about.title}</h1>
             <div className="aspect-[4/4.2] overflow-hidden rounded-[calc(var(--card-radius)-8px)]">
               <img
