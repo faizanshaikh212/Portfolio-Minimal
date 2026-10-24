@@ -1,3 +1,4 @@
+import { Infinity as InfinityIcon } from "lucide-react";
 import { content } from "../../data/content";
 import education from "../../data/education";
 import experience from "../../data/experience";
@@ -29,19 +30,25 @@ export function AboutPage({ theme }: { theme: Theme }) {
             <h2 className="mb-0 mt-5 text-2xl font-semibold tracking-tight">{profile.name}</h2>
             <p className="mb-0 mt-1 text-sm text-[var(--muted)]">{profile.role}</p>
             <p className="mb-0 mt-4 text-sm text-[var(--muted)]">{profile.location}</p>
-            <div className="mt-5 grid grid-cols-2 gap-2">
+            <div className="mt-5 grid auto-rows-[5.75rem] grid-cols-2 gap-2">
               {stats.map((stat) => (
-                <div className="rounded-2xl border border-[var(--line)] p-3" key={stat.label}>
-                  <strong className={`block font-semibold ${stat.value === "∞" ? "text-3xl leading-none" : "text-2xl"}`}>{stat.value}</strong>
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-[var(--muted)]">{stat.label}</span>
+                <div className="flex flex-col items-start rounded-2xl border border-[var(--line)] p-3" key={stat.label}>
+                  <strong className="flex h-8 items-center font-semibold">
+                    {stat.value === "∞" ? (
+                      <InfinityIcon aria-hidden="true" className="h-7 w-8" strokeWidth={3} />
+                    ) : (
+                      <span className="text-2xl">{stat.value}</span>
+                    )}
+                  </strong>
+                  <span className="mt-1.5 text-[0.65rem] font-semibold uppercase leading-tight tracking-[0.12em] text-[var(--muted)]">{stat.label}</span>
                 </div>
               ))}
               {config.showAge && (
-                <div className="rounded-2xl border border-[var(--line)] p-3" aria-label={about.ageLabel}>
-                  <strong className="block text-2xl font-semibold">
+                <div className="flex flex-col items-start rounded-2xl border border-[var(--line)] p-3" aria-label={about.ageLabel}>
+                  <strong className="flex h-8 items-center text-2xl font-semibold">
                     <AgeCounter dateOfBirth={siteConfig.about.dateOfBirth} />
                   </strong>
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-[var(--muted)]">{about.ageLabel} · {about.ageSuffix}</span>
+                  <span className="mt-1.5 text-[0.65rem] font-semibold uppercase leading-tight tracking-[0.12em] text-[var(--muted)]">{about.ageLabel} · {about.ageSuffix}</span>
                 </div>
               )}
             </div>

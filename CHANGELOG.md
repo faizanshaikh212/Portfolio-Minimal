@@ -3,6 +3,10 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.8.1 — 2026-10-25
+
+- Increase the infinity stat in the About profile card while keeping the card’s size, padding, and spacing unchanged.
+
 ## 0.8.0 — 2026-10-25
 
 - Add a live decimal age display to the About profile card, with date of birth configurable in `config/app.ts`.
