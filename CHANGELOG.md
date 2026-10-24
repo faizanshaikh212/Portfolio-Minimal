@@ -3,6 +3,11 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.7.2 — 2026-10-25
+
+- Center Home/About navigation links in the header and add softer theme-specific active/hover states.
+- Use complementary blue action-button colors in both themes for the hero work link.
+
 ## 0.7.1 — 2026-10-25
 
 - Keep the About profile card sticky below the navigation while the page scrolls on wider screens; restore normal flow on mobile.
