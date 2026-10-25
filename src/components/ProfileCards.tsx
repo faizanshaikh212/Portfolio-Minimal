@@ -1,6 +1,7 @@
 import { siteConfig } from "../../config/app";
 import { content } from "../../data/content";
 import skills from "../../data/skills";
+import { TechnologyBelt } from "./TechnologyBelt";
 
 export function ProfileCards() {
   const { profile, home } = content;
@@ -43,6 +44,7 @@ export function ProfileCards() {
               </div>
             ))}
           </div>
+          <TechnologyBelt />
         </article>
       )}
     </>

@@ -65,6 +65,35 @@ body {
     opacity 900ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.technology-belt {
+  overflow: hidden;
+}
+
+.technology-belt__loop {
+  --logoloop-logoHeight: clamp(1rem, 1.5vw, 1.35rem) !important;
+  --logoloop-gap: clamp(1rem, 2.25vw, 1.75rem) !important;
+}
+
+.technology-belt__loop svg {
+  display: block;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+.technology-belt__loop a[aria-label="Java"] svg,
+.technology-belt__loop a[aria-label="Fish"] svg,
+.technology-belt__loop a[aria-label="MySQL"] svg,
+.technology-belt__loop a[aria-label="Electron"] svg {
+  stroke: currentColor;
+  stroke-width: 0.55px;
+  stroke-linejoin: round;
+}
+
+.technology-belt__loop a:hover svg,
+.technology-belt__loop a:focus-visible svg {
+  color: var(--technology-belt-hover-color);
+  opacity: var(--technology-belt-hover-opacity);
+}
+
 .asterisk-spin {
   display: inline-block;
   transform-origin: center;

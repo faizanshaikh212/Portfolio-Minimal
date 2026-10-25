@@ -1,0 +1,92 @@
+import type { IconType } from "react-icons";
+import { DiJava } from "react-icons/di";
+import {
+  SiC,
+  SiCplusplus,
+  SiCloudinary,
+  SiCss,
+  SiElectron,
+  SiExpress,
+  SiFishshell,
+  SiGnubash,
+  SiHtml5,
+  SiJavascript,
+  SiLua,
+  SiMarkdown,
+  SiMongodb,
+  SiMysql,
+  SiNodedotjs,
+  SiPython,
+  SiReact,
+  SiSqlite,
+  SiTailwindcss,
+  SiThreedotjs,
+  SiTypescript,
+  SiZsh,
+} from "react-icons/si";
+import type { LogoLoopProps } from "../src/components/LogoLoop";
+
+type TechnologyLogo = {
+  icon: IconType;
+  title: string;
+  href: string;
+};
+
+export const technologyBeltConfig = {
+  ariaLabel: "Technologies and tools",
+  appearance: {
+    color: "var(--muted)",
+    hoverColor: "var(--text)",
+    opacity: 0.72,
+    hoverOpacity: 1,
+  },
+  logos: [
+    { icon: SiC, title: "C", href: "https://en.cppreference.com/w/c" },
+    { icon: SiCplusplus, title: "C++", href: "https://isocpp.org" },
+    { icon: SiLua, title: "Lua", href: "https://www.lua.org" },
+    { icon: DiJava, title: "Java", href: "https://www.java.com" },
+    { icon: SiPython, title: "Python", href: "https://www.python.org" },
+    { icon: SiGnubash, title: "Bash", href: "https://www.gnu.org/software/bash" },
+    { icon: SiZsh, title: "Zsh", href: "https://www.zsh.org" },
+    { icon: SiFishshell, title: "Fish", href: "https://fishshell.com" },
+    { icon: SiMysql, title: "MySQL", href: "https://www.mysql.com" },
+    { icon: SiMongodb, title: "MongoDB", href: "https://www.mongodb.com" },
+    { icon: SiMarkdown, title: "Markdown", href: "https://www.markdownguide.org" },
+    { icon: SiHtml5, title: "HTML", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { icon: SiCss, title: "CSS", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { icon: SiJavascript, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { icon: SiNodedotjs, title: "Node.js", href: "https://nodejs.org" },
+    { icon: SiExpress, title: "Express.js", href: "https://expressjs.com" },
+    { icon: SiReact, title: "React", href: "https://react.dev" },
+    { icon: SiTailwindcss, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { icon: SiCloudinary, title: "Cloudinary", href: "https://cloudinary.com" },
+    { icon: SiElectron, title: "Electron", href: "https://www.electronjs.org" },
+    { icon: SiSqlite, title: "SQLite", href: "https://www.sqlite.org" },
+    { icon: SiTypescript, title: "TypeScript", href: "https://www.typescriptlang.org" },
+    { icon: SiThreedotjs, title: "Three.js", href: "https://threejs.org" },
+  ] satisfies TechnologyLogo[],
+  loop: {
+    direction: "left",
+    speed: 36,
+    width: "100%",
+    logoHeight: 28,
+    gap: 36,
+    pauseOnHover: true,
+    hoverSpeed: 0,
+    fadeOut: true,
+    fadeOutWidth: 0.08,
+    scaleOnHover: true,
+    layout: "line",
+    bend: 0.5,
+    focus: 0,
+    magnify: 0,
+    tiltX: 0,
+    tiltY: 0,
+    step: false,
+    muted: 0,
+    labels: "hover",
+    draggable: true,
+    scrollBoost: 0,
+    intro: true,
+  } satisfies Omit<LogoLoopProps, "logos" | "renderItem" | "ariaLabel" | "className" | "style">,
+};

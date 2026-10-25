@@ -3,6 +3,10 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.11.0 — 2026-10-25
+
+- Add an animated, interactive technology-logo belt inside the Skills card, adapted from the CyberSpace portfolio component.
+
 ## 0.10.0 — 2026-10-25
 
 - Optically align the large headings in the status, About, location, and contact cards with their eyebrow and supporting copy without changing card sizing or padding.
