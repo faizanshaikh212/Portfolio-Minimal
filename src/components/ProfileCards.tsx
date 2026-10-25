@@ -11,7 +11,7 @@ export function ProfileCards() {
         {siteConfig.home.showAvailability && (
           <article className="glass-panel flex min-h-0 flex-col justify-between overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
             <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.statusEyebrow}</p>
-            <h2 className="m-0 text-[clamp(1.45rem,2.5vw,2rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
+            <h2 className="-ml-[0.06em] m-0 text-[clamp(1.45rem,2.5vw,2rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.availability}</h2>
             <p className="m-0 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{home.availabilityLabel}</p>
             <div className="flex items-center gap-[0.6rem] border-t border-[var(--line)] pt-4 text-[0.82rem] text-[var(--muted)]">
               <span className="relative size-[7px] shrink-0 rounded-full bg-[#80b99a] after:absolute after:-inset-1 after:animate-ping after:rounded-full after:border after:border-[#80b99a] after:content-[''] motion-reduce:after:animate-none" />
@@ -20,9 +20,9 @@ export function ProfileCards() {
           </article>
         )}
 
-        <article className="glass-panel relative flex min-h-0 flex-col justify-center overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
+        <article className="glass-panel relative flex min-h-0 flex-col overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[600px]:p-5">
           <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.aboutEyebrow}</p>
-          <h2 className="mb-0 mt-3 max-w-[340px] text-[clamp(1.6rem,3.15vw,2.5rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.role}</h2>
+          <h2 className="-ml-[0.06em] mb-0 mt-3 max-w-[340px] text-[clamp(1.6rem,3.15vw,2.5rem)] font-medium leading-[1.18] tracking-[-0.055em]">{profile.role}</h2>
           <p className="my-2 text-[0.95rem] leading-[1.65] text-[var(--muted)]">{profile.location}</p>
           <span className="absolute bottom-[1.15rem] right-6 text-[2.1rem] text-[var(--accent)] opacity-70" aria-hidden="true"><span className="asterisk-spin">✳</span></span>
         </article>
