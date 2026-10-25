@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useCyberspaceHover() {
+type HoverMedia = HTMLImageElement | HTMLVideoElement;
+
+export function useMediaHover() {
   const [isHovered, setIsHovered] = useState(false);
-  const videoElements = useRef<Array<HTMLVideoElement | null>>([]);
+  const mediaElements = useRef<Array<HoverMedia | null>>([]);
   const hoverTimer = useRef<number | null>(null);
 
   function updateHoverState(hovered: boolean) {
@@ -11,14 +13,14 @@ export function useCyberspaceHover() {
       return;
     }
 
-    for (const video of videoElements.current) {
-      if (!video) {
+    for (const media of mediaElements.current) {
+      if (!media) {
         continue;
       }
 
-      const currentFilter = getComputedStyle(video).filter;
-      video.getAnimations().forEach((animation) => animation.cancel());
-      video.animate(
+      const currentFilter = getComputedStyle(media).filter;
+      media.getAnimations().forEach((animation) => animation.cancel());
+      media.animate(
         [
           { filter: currentFilter, offset: 0 },
           { filter: "blur(2px)", offset: 0.24 },
@@ -64,7 +66,7 @@ export function useCyberspaceHover() {
 
   return {
     isHovered,
-    videoElements,
+    mediaElements,
     handlePointerEnter,
     handlePointerLeave,
   };

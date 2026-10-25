@@ -1,15 +1,15 @@
 import type { Theme } from "../../config/app";
 import { content } from "../../data/content";
-import { useCyberspaceHover } from "../hooks/useCyberspaceHover";
+import { useMediaHover } from "../hooks/useMediaHover";
 
 export function CyberspaceCard({ theme }: { theme: Theme }) {
   const { home, profile } = content;
   const {
     isHovered,
-    videoElements,
+    mediaElements,
     handlePointerEnter,
     handlePointerLeave,
-  } = useCyberspaceHover();
+  } = useMediaHover();
   const themeVideo = theme === "light"
     ? {
         src: "/assets/videos/clouds.mp4",
@@ -31,7 +31,7 @@ export function CyberspaceCard({ theme }: { theme: Theme }) {
       onPointerLeave={handlePointerLeave}
     >
       <video
-        ref={(element) => { videoElements.current[0] = element; }}
+        ref={(element) => { mediaElements.current[0] = element; }}
         className={`cyberspace-video absolute inset-0 size-full object-cover ${isHovered ? "opacity-0" : "opacity-100"}`}
         src={themeVideo.src}
         poster={themeVideo.poster}
@@ -43,7 +43,7 @@ export function CyberspaceCard({ theme }: { theme: Theme }) {
         aria-hidden="true"
       />
       <video
-        ref={(element) => { videoElements.current[1] = element; }}
+        ref={(element) => { mediaElements.current[1] = element; }}
         className={`cyberspace-video absolute inset-0 size-full object-cover ${isHovered ? "opacity-100" : "opacity-0"}`}
         src="/assets/videos/moon.mp4"
         poster="/assets/images/moon-poster.jpg"

@@ -3,9 +3,14 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.8.2 — 2026-10-25
+
+- Crossfade project previews to their opposite-theme images on hover, using the same delayed blur-and-crossfade effect as the Cyberspace card.
+
 ## 0.8.1 — 2026-10-25
 
 - Increase the infinity stat in the About profile card while keeping the card’s size, padding, and spacing unchanged.
+- Make the text size consistent across all stats
 
 ## 0.8.0 — 2026-10-25
 

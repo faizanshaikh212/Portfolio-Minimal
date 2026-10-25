@@ -1,6 +1,7 @@
 import { content } from "../../data/content";
 import type { Project } from "../../data/projects";
 import type { Theme } from "../../config/app";
+import { useMediaHover } from "../hooks/useMediaHover";
 
 export function ProjectCard({
   project,
@@ -11,10 +12,22 @@ export function ProjectCard({
   theme: Theme;
   mobileOrder: number;
 }) {
+  const alternateTheme = theme === "dark" ? "light" : "dark";
+  const { isHovered, mediaElements, handlePointerEnter, handlePointerLeave } = useMediaHover();
+
   return (
     <article
-      className="glass-panel group h-fit self-start overflow-hidden rounded-[var(--card-radius)] border transition duration-200 hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--accent)_48%,var(--line))]"
+      className="glass-panel group h-fit self-start overflow-hidden rounded-[var(--card-radius)] border"
       style={{ order: mobileOrder }}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
+      onFocus={handlePointerEnter}
+      onBlur={(event) => {
+        const nextTarget = event.relatedTarget;
+        if (!(nextTarget instanceof Node) || !event.currentTarget.contains(nextTarget)) {
+          handlePointerLeave();
+        }
+      }}
     >
       <a
         className="block"
@@ -25,8 +38,17 @@ export function ProjectCard({
       >
         <div className="relative overflow-hidden bg-[var(--raised)]" aria-hidden="true">
           <img
-            className="block h-auto w-full"
+            ref={(element) => { mediaElements.current[0] = element; }}
+            className={`project-card-image block h-auto w-full ${isHovered ? "opacity-0" : "opacity-100"}`}
             src={project.images[theme]}
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            ref={(element) => { mediaElements.current[1] = element; }}
+            className={`project-card-image absolute inset-0 size-full object-cover ${isHovered ? "opacity-100" : "opacity-0"}`}
+            src={project.images[alternateTheme]}
             alt=""
             loading="lazy"
             decoding="async"
