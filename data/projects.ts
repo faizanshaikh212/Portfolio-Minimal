@@ -10,6 +10,28 @@ export interface Project {
 
 const projects: Project[] = [
   {
+    title: "Portfolio-Cyberspace",
+    category: "An immersive portfolio experience",
+    year: "2026",
+    description:
+      "An interactive portfolio built around cinematic themes, expressive motion, and detailed project stories. It blends a responsive React interface with Three.js atmospheres, synthesized audio, and a hidden secret archive for a distinctive way to explore my creative work.",
+    technologies: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Three.js / WebGL",
+      "Framer Motion",
+      "GSAP",
+      "Web Audio API",
+    ],
+    href: "https://faizanshaikh212.vercel.app/",
+    images: {
+      dark: "/assets/images/portfolio-cyberspace-preview.png",
+      light: "/assets/images/portfolio-cyberspace-preview.png",
+    },
+  },
+  {
     title: "Financial Cryosis",
     category: "Private finance, made clear",
     year: "2026",
@@ -61,6 +83,20 @@ const projects: Project[] = [
       light: "/assets/images/academic-vault-light.webp",
     },
   },
+  {
+    title: "Portfolio-Minimal",
+    category: "A minimal-bento styled portfolio",
+    year: "2026",
+    description:
+      "The site you’re viewing now: a responsive portfolio built with React, TypeScript, and Vite. Its bento-style layout uses a cohesive light and dark blue-glass theme, with projects and skills organized as editable data and site-wide presentation options kept in config. It also features a dedicated About page, live age counter, animated technology belt, and theme-aware project previews.",
+    technologies: ["React 19", "TypeScript", "Vite", "Tailwind CSS 4", "Lucide React", "React Icons"],
+    href: "/",
+    images: {
+      dark: "/assets/images/portfolio-minimal-preview.webp",
+      light: "/assets/images/portfolio-minimal-preview.webp",
+    },
+  },
+  
 ];
 
 export default projects;

@@ -3,6 +3,11 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.11.2 — 2026-10-25
+
+- Add Portfolio-Cyberspace with its preview artwork, deployed link, detailed summary, and technology stack.
+- Add Portfolio-Minimal before AcademicVault-Connect with the provided site screenshot, project details, and technology stack.
+
 ## 0.11.1 — 2026-10-25
 
 - Slightly widen the Cyberspace card and rebalance the Skills card to use the remaining desktop grid width; preserve tablet and mobile layouts.
