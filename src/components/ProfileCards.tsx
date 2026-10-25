@@ -30,7 +30,7 @@ export function ProfileCards() {
       </div>
 
       {siteConfig.home.showSkills && (
-        <article className="glass-panel col-start-5 col-span-8 overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[820px]:col-start-auto max-[820px]:col-span-6 max-[600px]:col-span-full max-[600px]:p-5">
+        <article className="glass-panel col-start-6 col-span-7 overflow-hidden rounded-[var(--card-radius)] border p-[1.6rem] max-[820px]:col-start-auto max-[820px]:col-span-6 max-[600px]:col-span-full max-[600px]:p-5">
           <p className="m-0 flex items-center gap-[0.55rem] text-[0.75rem] font-semibold uppercase leading-[1.5] tracking-[0.14em] text-[var(--muted)]">{home.skillsEyebrow}</p>
           <div className="mt-[1.35rem] grid grid-cols-3 gap-4 max-[820px]:grid-cols-1 max-[820px]:gap-3.5 max-[600px]:grid-cols-2">
             {skills.map((group) => (

@@ -26,7 +26,7 @@ export function CyberspaceCard({ theme }: { theme: Theme }) {
       target="_blank"
       rel="noreferrer"
       aria-label={home.cyberspaceLinkLabel}
-      className="glass-panel cyberspace-card group relative isolate col-start-1 row-start-2 col-span-4 flex min-h-[250px] items-center overflow-hidden rounded-[var(--card-radius)] border p-8 no-underline transition duration-500 hover:border-[var(--accent)] max-[820px]:col-start-auto max-[820px]:row-start-auto max-[820px]:col-span-6 max-[820px]:p-6 max-[600px]:col-span-full max-[600px]:min-h-[220px] max-[600px]:px-5"
+      className="glass-panel cyberspace-card group relative isolate col-start-1 row-start-2 col-span-5 flex min-h-[250px] items-center overflow-hidden rounded-[var(--card-radius)] border p-8 no-underline transition duration-500 hover:border-[var(--accent)] max-[820px]:col-start-auto max-[820px]:row-start-auto max-[820px]:col-span-6 max-[820px]:p-6 max-[600px]:col-span-full max-[600px]:min-h-[220px] max-[600px]:px-5"
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
     >

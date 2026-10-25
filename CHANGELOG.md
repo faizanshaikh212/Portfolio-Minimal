@@ -3,6 +3,10 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.11.1 — 2026-10-25
+
+- Slightly widen the Cyberspace card and rebalance the Skills card to use the remaining desktop grid width; preserve tablet and mobile layouts.
+
 ## 0.11.0 — 2026-10-25
 
 - Add an animated, interactive technology-logo belt inside the Skills card, adapted from the CyberSpace portfolio component.
