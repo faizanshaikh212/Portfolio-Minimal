@@ -8,6 +8,11 @@
     <link rel="icon" type="image/png" sizes="1024x1024" href="/favicon.png" />
     <link rel="alternate icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.png" />
+    <style>
+      html, body { min-height: 100%; margin: 0; }
+      html[data-theme="dark"] body { background-color: #0d0f11; color: #f2f5f7; }
+      html[data-theme="light"] body { background-color: #eaf5fc; color: #18334a; }
+    </style>
     <meta
       name="description"
       content="__SITE_DESCRIPTION__"
@@ -20,6 +25,7 @@
         if (theme === "light" || theme === "dark") {
           document.documentElement.dataset.theme = theme;
         }
+        document.documentElement.style.colorScheme = document.documentElement.dataset.theme;
       } catch (error) {
         console.warn("The saved theme could not be restored.", error);
       }

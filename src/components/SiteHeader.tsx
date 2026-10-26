@@ -9,8 +9,8 @@ type Props = {
   theme: Theme;
   craters: MoonCrater[];
   onToggleTheme: () => void;
-  currentPage: "home" | "about";
-  onNavigate: (path: "/" | "/about") => void;
+  currentPage: "home" | "about" | "contact";
+  onNavigate: (path: "/" | "/about" | "/contact") => void;
 };
 
 export function SiteHeader({ theme, craters, onToggleTheme, currentPage, onNavigate }: Props) {
@@ -30,6 +30,7 @@ export function SiteHeader({ theme, craters, onToggleTheme, currentPage, onNavig
       <nav className="absolute left-1/2 flex -translate-x-1/2 items-center gap-[clamp(0.8rem,2.5vw,1.6rem)] text-[0.9rem] text-[var(--muted)] max-[600px]:static max-[600px]:ml-auto max-[600px]:translate-x-0 max-[600px]:gap-1 max-[600px]:text-[0.78rem]" aria-label={header.navigationLabel}>
         <a className={`rounded-full px-3 py-2 transition-colors hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)] max-[600px]:px-2 ${currentPage === "home" ? "bg-[var(--nav-active-bg)] text-[var(--nav-active-text)]" : ""}`} href="/" aria-current={currentPage === "home" ? "page" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("/"); }}>{header.homeLabel}</a>
         <a className={`rounded-full px-3 py-2 transition-colors hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)] max-[600px]:px-2 ${currentPage === "about" ? "bg-[var(--nav-active-bg)] text-[var(--nav-active-text)]" : ""}`} href="/about" aria-current={currentPage === "about" ? "page" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("/about"); }}>{header.aboutLabel}</a>
+        <a className={`rounded-full px-3 py-2 transition-colors hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)] max-[600px]:px-2 ${currentPage === "contact" ? "bg-[var(--nav-active-bg)] text-[var(--nav-active-text)]" : ""}`} href="/contact" aria-current={currentPage === "contact" ? "page" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("/contact"); }}>{header.contactLabel}</a>
       </nav>
       <div className="ml-auto max-[600px]:ml-0">
         <ThemeToggle theme={theme} craters={craters} onToggle={onToggleTheme} />

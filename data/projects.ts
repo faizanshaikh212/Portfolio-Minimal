@@ -14,7 +14,7 @@ const projects: Project[] = [
     category: "An immersive portfolio experience",
     year: "2026",
     description:
-      "An interactive portfolio built around cinematic themes, expressive motion, and detailed project stories. It blends a responsive React interface with Three.js atmospheres, synthesized audio, and a hidden secret archive for a distinctive way to explore my creative work.",
+      "A richly interactive portfolio built around cinematic themes, expressive motion, and detailed project stories. It blends a responsive React interface with Three.js atmospheres, synthesized audio, and a hidden secret archive for a distinctive way to explore my creative work.",
     technologies: [
       "React 19",
       "TypeScript",

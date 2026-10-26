@@ -3,6 +3,13 @@
 Versions use `MAJOR.MINOR.PATCH`: major redesigns, feature releases, and fixes.
 Each release records the user-visible changes and the main implementation choices.
 
+## 0.12.0 — 2026-10-25
+
+- Add a Contact page with theme-aware bento cards for email, GitHub, LinkedIn, and the CyberSpace portfolio.
+- Add Contact navigation, direct `/contact` routing, and a critical theme-colored page background to prevent white flashes before app styles load.
+- Add configurable project-image slideshows with per-project image lists and individual enable/disable settings.
+- Keep the existing light/dark image swap as the fallback when slideshows are disabled or a project has no gallery.
+
 ## 0.11.2 — 2026-10-25
 
 - Add Portfolio-Cyberspace with its preview artwork, deployed link, detailed summary, and technology stack.

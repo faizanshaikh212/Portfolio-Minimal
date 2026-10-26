@@ -45,7 +45,7 @@ export function AboutPage({ theme }: { theme: Theme }) {
               ))}
               {config.showAge && (
                 <div className="flex flex-col items-start rounded-2xl border border-[var(--line)] p-3" aria-label={about.ageLabel}>
-                  <strong className="flex h-8 items-center text-2xl font-semibold">
+                  <strong className="block h-8 text-2xl font-semibold leading-8">
                     <AgeCounter dateOfBirth={siteConfig.about.dateOfBirth} />
                   </strong>
                   <span className="mt-1.5 text-[0.65rem] font-semibold uppercase leading-tight tracking-[0.12em] text-[var(--muted)]">{about.ageLabel} · {about.ageSuffix}</span>
